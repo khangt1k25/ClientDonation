@@ -25,7 +25,7 @@ function Project ()  {
     
     const [nftURI, setnftURI] = useState('')
     const [AmountDonate, setAmountDonate] = useState(0)
-    const [doneeID, setdoneeID] = useState(-1)
+    const [doneeID, setdoneeID] = useState(0)
     const [AmountDistribute, setAmountDistribute] = useState(0)
     
     const [isDonor, setisDonor] = useState(false)
@@ -118,7 +118,7 @@ function Project ()  {
             <Form>
                 <Form.Group className="mb-4 p-4" controlId="formBasicEmail">
                     <Form.Label>Donee ID</Form.Label>
-                    <Form.Control  value={doneeID} onChange={e=>setdoneeID(e.target.value)} type="text" placeholder="Enter ID" />
+                    <Form.Control  value={doneeID} onChange={e=>setdoneeID(e.target.value)} type="number" placeholder="Enter ID" />
                     <Form.Label>Amount (ETH)</Form.Label>
                     <Form.Control  value={AmountDistribute} onChange={e=>setAmountDistribute(e.target.value)} type="number" placeholder= "Enter amount ETH "/>
                 </Form.Group>

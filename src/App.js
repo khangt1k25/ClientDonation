@@ -19,8 +19,9 @@ function App() {
 
  
   async function loadBlockchainData(){
-    
+    console.log(Web3.givenProvider)
     const web3 = new Web3(Web3.givenProvider||"http://127.0.0.1:7545")
+
     const network = await web3.eth.net.getNetworkType()
     const accounts = await web3.eth.getAccounts()
     setaccount(accounts[0])
